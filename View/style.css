@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: azure;
+}
+
+.search__form{
+    width: 500px;
+    margin: 100px auto 0 auto;
+    display: flex;
+}
+.search__input{
+    padding: 4px 12px;
+    flex-grow: 1;
+    height: 30px;
+    border: 1px solid rgb(190, 190, 190);
+    outline: none;
+}
+.search__submit{
+    padding: 0 20px;
+    outline: none;
+    border: 1px solid rgb(190, 190, 190);
+    cursor: pointer;
+    transition: all .2s;
+}
+.search__submit:hover{
+    background-color: rgb(190, 190, 190);
+}
+
+
+.found{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.found__post{
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 3px;
+    padding: 16px;
+}
+
+.found__post_title{
+    font-size: 20px;
+}
+
+.found__comments{
+    border-top: 1px solid rgb(218, 218, 218);
+    margin-top: 15px;
+}
+.comments__heading{
+    margin-top: 15px;
+}
+.found__comment{
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid rgb(218, 218, 218);
+}
+.found__comment_name, .found__comment_email, .found__comment_body{
+    margin-top: 8px;
+}
