@@ -7,6 +7,7 @@ $postRepository = new PostRepository($db);
 
 $response = [];
 $error = null;
+$notfound = false;
 try {
 
     if (isset($_GET["search"])) {
@@ -39,9 +40,11 @@ try {
                     "email" => $comment->getEmail(),
                     "body" => $comment->getBody()
                 ];
-            
         }
-        
+
+        if(count($response) === 0 ){
+            $notfound = true;
+        }
     }
 }catch(PDOException $e){
     $error = "Проблема с подключением к бд";

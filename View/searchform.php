@@ -22,6 +22,12 @@
   <?php endif; ?>
   
 
+  <?php if($notfound): ?>
+    <h3 class="error">
+        По данному запросу ничего не найдено!
+    </h3>
+  <?php endif; ?>
+
 
   <?php if(count($response)>0): ?>
     <section class="found">
