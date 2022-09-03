@@ -62,7 +62,7 @@ body{
 .found__comment_name, .found__comment_email, .found__comment_body{
     margin-top: 8px;
 }
-.error{
+.alert{
     text-align: center;
     margin-top: 30px;
 }

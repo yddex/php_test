@@ -1,6 +1,5 @@
 <?php
 
-require_once "./Models/Post.php";
 class PostRepository
 {
     private PDO $db;

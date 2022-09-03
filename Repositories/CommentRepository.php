@@ -1,6 +1,5 @@
 <?php
 
-require_once './Models/Comment.php';
 class CommentRepository
 {
     private PDO $db;
