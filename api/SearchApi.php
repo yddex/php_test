@@ -1,19 +1,19 @@
 <?php
-// require_once "../Models/Comment.php";
-// require_once "../Models/Post.php";
-// require_once "../Repositories/CommentRepository.php";
-// require_once "../Repositories/PostRepository.php";
+require_once "../Models/Comment.php";
+require_once "../Models/Post.php";
+require_once "../Repositories/CommentRepository.php";
+require_once "../Repositories/PostRepository.php";
 
 
-// $db = new PDO("sqlite:../db/database.sqlite");
-$db = require_once "./db.php";
+$db = new PDO("sqlite:../db/database.sqlite");
 $commentRepository = new CommentRepository($db);
 $postRepository = new PostRepository($db);
 
 
 try {
 
-    if (isset($_GET["search"])) {
+    if (isset($_GET["api"])&& $_GET["api"]="search" && isset($_GET["search"])) {
+        
         //Извлекаем строку для поиска из GET запроса
         $searchSubstring = $_GET["search"];
 
@@ -49,7 +49,6 @@ try {
 
         $response["status"] = 200;
         echo json_encode($response);
-        die();
     }
 
 
@@ -58,9 +57,7 @@ try {
     $response["body"] = $e->getMessage();
 
     echo json_encode($response);
-    die();
 }
 
 
-require_once "./View/searchform.php";
 

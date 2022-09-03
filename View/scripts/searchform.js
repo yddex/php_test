@@ -69,7 +69,7 @@ function updateAlert(newValue){
 
 function getSearchData(searchStr){
 
-    fetch(`/?search=${searchStr}`)
+    fetch(`/api/SearchApi.php/?api=search&search=${searchStr}`)
         .then((response)=>{
             return response.json();
         })
