@@ -36,7 +36,8 @@ body{
     
 }
 .found__post{
-    border: 1px solid black;
+    box-shadow: 0px 0px 11px 3px rgba(191,191,191,0.75);
+    border-radius: 10px;
     background-color: white;
     margin-top: 40px;
     border-radius: 3px;
@@ -45,6 +46,9 @@ body{
 
 .found__post_title{
     font-size: 20px;
+}
+.found__post_id, .found__comment_id{
+    color: rgb(179, 179, 179);
 }
 
 .found__comments{
@@ -55,14 +59,20 @@ body{
     margin-top: 15px;
 }
 .found__comment{
+    font-size: 12px;
     margin-top: 20px;
-    padding: 5px;
-    border: 1px solid rgb(218, 218, 218);
+    padding: 10px;
+    box-shadow: 0px 0px 11px 3px rgba(206, 206, 206, 0.75);
 }
 .found__comment_name, .found__comment_email, .found__comment_body{
     margin-top: 8px;
 }
 .alert{
+    width: 600px;
+    margin: 0 auto;
     text-align: center;
+    box-shadow: 0px 0px 11px 3px rgba(191,191,191,0.75);
+    border-radius: 10px;
+    padding: 10px;
     margin-top: 30px;
 }

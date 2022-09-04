@@ -6,16 +6,16 @@ let alertEl = document.querySelector(".alert");
 function updateHtmlSearchResult(data){
 
     foundSection.innerHTML = "";
-    updateAlert("");
     if(data.body.length === 0){
         updateAlert("Ничего не найденно");
 
     }else{
+        let countComments = 0;
         for (let key in data.body) {
 
             const postFound = data.body[key];
             const comments = postFound.comments;
-
+            countComments += comments.length;
             //Создание разметки комментариев
             let commentsHtml = "";
             comments.forEach((comment)=>{
@@ -43,7 +43,7 @@ function updateHtmlSearchResult(data){
             foundSection.innerHTML += 
             `
             <div class="found__post">
-            <h2 class="found__post_title">
+            <h2 class="found__post_id">
                Запись № ${key}
             </h2>
             <h2 class="found__post_title">
@@ -59,6 +59,7 @@ function updateHtmlSearchResult(data){
             `;
          
         }
+        updateAlert(`Комментариев найдено: ${countComments}`);
 
     }
 }
